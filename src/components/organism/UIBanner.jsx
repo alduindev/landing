@@ -104,7 +104,7 @@ export default function UIBanner() {
                 </div>
 
                 <div className="md:w-1/2">
-                    <img src="https://i.imgur.com/kpBrPwS.png" alt="Personas" className="w-full object-cover" />
+                    <img src="https://placehold.co/300x160" alt="Personas" className="w-full object-cover" />
                 </div>
             </div>
 
