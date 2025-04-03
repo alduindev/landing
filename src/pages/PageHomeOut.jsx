@@ -1,18 +1,22 @@
 import React from 'react'
 import UIHeader from '../components/organism/UIHeader'
-import UIFooter from '../components/organism/UIFooter'
-import UIBanner from '../components/organism/UIBanner'
+import UIBannerPrincipal from '../components/organism/UIBannerPrincipal'
 import UICardScroll from '../components/organism/UICardScroll'
+
+
+
+
+import UIFooter from '../components/organism/UIFooter'
 
 const PageHomeOut = () => {
   return (
     <>
-    <UIHeader />
-    <UIBanner />
-    <UICardScroll/>
+      <UIHeader />
+      <UIBannerPrincipal />
+      <UICardScroll />
 
-    <UIFooter />
-    
+      <UIFooter variante="oscuro"/>
+
     </>
   )
 }

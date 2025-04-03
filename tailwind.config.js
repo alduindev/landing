@@ -5,6 +5,11 @@ module.exports = {
       fontFamily: {
         orbitron: ["Orbitron", "sans-serif"],
       },
+      colors: {
+        primary: '#ffffff',
+        secondary: '#e5e7eb',
+        tertiary: '#374151',
+      },
       animation: {
         pulse: "pulse 1.5s infinite",
         matrixBg: "matrixBg 10s linear infinite",

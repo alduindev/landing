@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
+import UIButton from '../atoms/UIButton'
 
-export default function UIBanner() {
+export default function UIBannerPrincipal() {
     const [mostrarModal, setMostrarModal] = useState(false)
 
     const [nombre, setNombre] = useState('')
@@ -90,16 +91,18 @@ export default function UIBanner() {
                 <div className="md:w-1/2 text-center md:text-left space-y-6">
                     <h1 className="text-4xl md:text-5xl font-semibold text-purple-600 leading-tight">
                         Conecta con<br />
-                        trabajadoras independientes<br />
-                        en limpieza cerca de ti
+                        workers independientes<br />
+                        cerca de ti
                     </h1>
+
                     <div className="w-full max-w-md mx-auto md:mx-0">
-                        <button
+                        <UIButton
                             onClick={() => setMostrarModal(true)}
-                            className="bg-purple-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:opacity-90 transition"
+                            variant="primary"
+                            size="md"
                         >
                             Empezar
-                        </button>
+                        </UIButton>
                     </div>
                 </div>
 
@@ -218,24 +221,22 @@ export default function UIBanner() {
                                         className="w-full px-4 py-2 rounded-full text-sm bg-[#f0f0f3] shadow-inner border border-gray-200 outline-none"
                                     />
 
-                                    <button
+                                    <UIButton
                                         type="button"
                                         disabled={!valido}
                                         onClick={handleRegistro}
-                                        className={`w-full py-3 rounded-full font-medium text-sm shadow-md transition ${valido
-                                            ? 'bg-purple-600 text-white hover:opacity-90'
-                                            : 'bg-gray-300 text-gray-400 cursor-not-allowed'
-                                            }`}
+                                        variant={valido ? "primary" : "secondary"}
+                                        className={!valido ? "cursor-not-allowed bg-gray-300 text-gray-400 hover:opacity-100" : ""}
                                     >
                                         Continuar
-                                    </button>
+                                    </UIButton>
 
                                     <p className="text-center text-[11px] text-gray-500 mt-2">
                                         Al hacer uso de la plataforma, aceptas los{' '}
                                         <button
                                             type="button"
                                             onClick={() => setShowTerminos(true)}
-                                            className="text-purple-600 underline hover:text-purple-800"
+                                            className="text-tertiary underline hover:text-purple-800"
                                         >
                                             Términos y condiciones
                                         </button>.
@@ -269,18 +270,18 @@ export default function UIBanner() {
                                         </p>
                                     </div>
 
-                                    <button
+                                    <UIButton
                                         onClick={() => setShowTerminos(false)}
-                                        className="mt-6 w-full bg-purple-600 text-white py-3 rounded-full font-medium text-sm hover:opacity-90 transition shadow-md"
                                     >
                                         Volver
-                                    </button>
+                                    </UIButton>
                                 </div>
                             </>
                         )}
                     </div>
                 </div>
             )}
+            
         </div>
     )
 }

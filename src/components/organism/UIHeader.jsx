@@ -4,7 +4,7 @@ export default function UIHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <div className="bg-[#f6f6f6] shadow-md flex items-center justify-between rounded-2xl mx-4 my-4 p-4 neumorphic-shadow relative z-50">
+    <div className="sticky top-4 z-50 bg-[#f6f6f6] shadow-md flex items-center justify-between rounded-2xl mx-4 my-4 p-4 neumorphic-shadow">
       <div className="flex items-center space-x-4">
         <div className="text-xl font-bold text-[#111827] hidden md:block">LANDING</div>
         <div className="md:hidden">
@@ -35,7 +35,7 @@ export default function UIHeader() {
         <a className="text-[#6b7280] hover:text-[#111827] cursor-pointer">Quiero unirme</a>
       </div>
 
-      <div className="">
+      <div>
         <button className="bg-[#f6f6f6] px-4 py-2 rounded-full text-[#111827] hover:text-[#6b7280] neumorphic-button transition">
           Iniciar Sesión
         </button>
