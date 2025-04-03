@@ -14,14 +14,13 @@ const UIButton = ({
   fullWidth = true,
   ...props
 }) => {
-  const baseStyles =
-    'mt-6 w-full h-auto font-medium text-sm focus:outline-none focus:ring-2 transition-all duration-200 ease-in-out flex items-center justify-center gap-2 rounded-full py-3 shadow-md hover:opacity-90'
+  const baseStyles = 'mt-6 font-medium text-sm focus:outline-none transition-all duration-200 ease-in-out flex items-center justify-center gap-2 rounded-full py-3'
 
   const variants = {
-    primary: 'bg-primary text-tertiary border border-gray-300 focus:ring-gray-200',
-    secondary: 'bg-secondary text-tertiary focus:ring-gray-400',
-    tertiary: 'bg-tertiary text-white focus:ring-gray-600',
-    danger: 'bg-red-500 text-white focus:ring-red-300',
+    primary: 'bg-[#e0e0e0] text-gray-700 shadow-neumorphism hover:shadow-neumorphism-inset',
+    secondary: 'bg-[#e0e0e0] text-gray-500 shadow-neumorphism hover:shadow-neumorphism-inset',
+    tertiary: 'bg-[#d3d3d3] text-gray-800 shadow-neumorphism hover:shadow-neumorphism-inset',
+    danger: 'bg-red-400 text-white shadow-neumorphism hover:shadow-neumorphism-inset',
   }
 
   const sizes = {
@@ -41,13 +40,14 @@ const UIButton = ({
         sizes[size],
         disabled && 'opacity-50 cursor-not-allowed',
         !fullWidth && 'w-auto',
+        fullWidth && 'w-full',
         className
       )}
       {...props}
     >
       {loading && (
         <svg
-          className="animate-spin h-4 w-4 text-white"
+          className="animate-spin h-4 w-4 text-gray-700"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"

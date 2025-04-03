@@ -1,37 +1,21 @@
-import React, { useRef, useEffect } from 'react'
-import { baseCards } from '../../modules/helpers/dataCards'
-import UICard from '../molecules/UICard'
+import React, { useRef } from "react";
+import { baseCards } from "../../modules/helpers/dataCards";
+import UICard from "../molecules/UICard";
 
 const UICardScroll = () => {
-  const scrollRef = useRef(null)
-
-  useEffect(() => {
-    const container = scrollRef.current
-    if (!container) return
-
-    if (window.innerWidth < 640) {
-      const firstCard = container.querySelector('.card-item')
-      if (firstCard) {
-        const containerRect = container.getBoundingClientRect()
-        const cardRect = firstCard.getBoundingClientRect()
-        const offset = cardRect.left - containerRect.left - (container.clientWidth / 2) + (firstCard.clientWidth / 2)
-        container.scrollBy({ left: offset, behavior: 'smooth' })
-      }
-    }
-  }, [])
+  const scrollRef = useRef(null);
 
   const scrollByAmount = (amount) => {
     if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: amount, behavior: 'smooth' })
+      scrollRef.current.scrollBy({ left: amount, behavior: "smooth" });
     }
-  }
+  };
 
   return (
     <div className="relative w-full">
       <div className="absolute top-0 left-0 w-10 h-full bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
       <div className="absolute top-0 right-0 w-10 h-full bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
-
-      <div className="sm:hidden">
+      <div className="xl:hidden">
         <button
           onClick={() => scrollByAmount(-200)}
           className="absolute left-2 top-1/2 -translate-y-1/2 bg-white shadow-md z-20 rounded-full p-2"
@@ -45,24 +29,20 @@ const UICardScroll = () => {
           &gt;
         </button>
       </div>
-
       <div
         ref={scrollRef}
-        className="w-full overflow-x-auto py-12 px-4 snap-x snap-mandatory scroll-smooth cursor-grab active:cursor-grabbing"
+        className="flex space-x-4 lg:justify-center lg:items-center overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4
+             px-4 sm:px-6 md:px-8
+             [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']"
       >
-        <div
-          className={`flex gap-6 items-stretch ${
-            baseCards.length <= 3 ? 'sm:justify-center' : 'sm:justify-start'
-          }`}
-        >
-          {baseCards.map((card, index) => (
-            <UICard key={index} card={card} scrollRef={scrollRef} />
-          ))}
-          <div className="flex-shrink-0 w-[10%] sm:w-[40%] md:hidden" />
-        </div>
+        <div className="shrink-0 w-[5%] sm:w-[10%] md:w-[12%] lg:w-[15%]" />
+        {baseCards.map((card, index) => (
+          <UICard key={index} card={card} />
+        ))}
+        <div className="shrink-0 w-[5%] sm:w-[10%] md:w-[12%] lg:w-[15%]" />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default UICardScroll
+export default UICardScroll;
