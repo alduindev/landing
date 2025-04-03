@@ -87,54 +87,49 @@ export default function UIBannerPrincipal() {
 
     return (
         <div className="relative bg-white w-full">
+
             <div className="flex flex-col-reverse md:flex-row items-center justify-between px-6 py-10 md:py-20 max-w-7xl mx-auto gap-10 md:gap-16">
-                {/* Texto izquierdo */}
-                <div className="md:w-1/2 text-center md:text-left space-y-6">
+                <div className="md:w-1/2 text-center md:text-center space-y-6">
                     <h1 className="text-4xl md:text-5xl font-extrabold text-purple-600 leading-tight">
                         Conecta con<br />
                         workers independientes<br />
                         cerca de ti
                     </h1>
 
-                    <div className="w-full max-w-md mx-auto md:mx-0">
-                        <UIButton
-                            onClick={() => setMostrarModal(true)}
-                            variant="primary"
-                            size="md"
-                            fullWidth
-                        >
-                            Empezar
-                        </UIButton>
-                    </div>
+                    <UIButton
+                        onClick={() => setMostrarModal(true)}
+                        variant="primary"
+                        size="md"
+                        fullWidth
+                    >
+                        Empezar
+                    </UIButton>
                 </div>
 
-                {/* Imágenes derechas */}
                 <div className="md:w-1/2 flex flex-col md:flex-row gap-4 h-[500px] w-full">
-                    {/* Imagen vertical izquierda */}
                     <div className="w-full md:w-1/2 h-full">
                         <img
-                            src="https://placehold.co/600x400"
+                            src="https://placehold.co/600x500"
                             alt="Vertical"
                             className="w-full h-full object-cover rounded-2xl shadow-lg"
                         />
                     </div>
 
-                    {/* Imágenes horizontales derecha */}
                     <div className="w-full md:w-1/2 flex flex-col gap-4 h-full">
                         <img
-                            src="https://placehold.co/600x200"
+                            src="https://placehold.co/600x250"
                             alt="Horizontal 1"
                             className="w-full h-1/2 object-cover rounded-2xl shadow-lg"
                         />
                         <img
-                            src="https://placehold.co/600x200"
+                            src="https://placehold.co/600x250"
                             alt="Horizontal 2"
                             className="w-full h-1/2 object-cover rounded-2xl shadow-lg"
                         />
                     </div>
                 </div>
-            </div>
 
+            </div>
 
             {mostrarModal && (
                 <div className="fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center px-4">
