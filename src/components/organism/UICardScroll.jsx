@@ -31,8 +31,7 @@ const UICardScroll = () => {
       </div>
       <div
         ref={scrollRef}
-        className="flex space-x-4 lg:justify-center lg:items-center overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4
-             px-4 sm:px-6 md:px-8
+        className="flex space-x-4 lg:justify-center lg:items-center overflow-x-auto scroll-smooth snap-x snap-mandatory py-12
              [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']"
       >
         <div className="shrink-0 w-[5%] sm:w-[10%] md:w-[12%] lg:w-[15%]" />
