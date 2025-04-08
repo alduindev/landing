@@ -9,7 +9,7 @@ const UICardImage = ({ cards }) => {
   const renderCard = (card, index, extraClasses = '') => (
     <div
       key={index}
-      className={`relative rounded-xl shadow-md overflow-hidden h-[400px] sm:h-[500px] flex items-center justify-center text-white w-full ${extraClasses}`}
+      className={`relative rounded-xl shadow-md overflow-hidden h-[400px] sm:h-[700px] flex items-center justify-center text-white w-full ${extraClasses}`}
     >
       <img
         src={card.imageUrl}

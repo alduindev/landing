@@ -123,13 +123,15 @@ const UICardsImageSlider = () => {
 
       {/* Slider */}
       <div
-        ref={sliderRef}
-        className="flex overflow-x-auto space-x-4 md:space-x-6 scroll-smooth scrollbar-hide transition-all duration-300 ease-in-out px-4 md:px-12"
-      >
+  ref={sliderRef}
+  className="flex overflow-x-auto space-x-4 md:space-x-6 scroll-smooth scrollbar-hide transition-all duration-300 ease-in-out px-4 md:px-12"
+  style={{ scrollPadding: '0 20px' }}
+>
+
         {cards.map((card, index) => (
           <div
             key={index}
-            className="card w-[260px] md:w-[350px] h-[450px] sm:h-[500px] rounded-[28px] flex-shrink-0 relative overflow-hidden shadow-md group transition-transform duration-500"
+            className="card w-[clamp(250px,30vw,350px)] h-[clamp(380px,50vh,520px)] rounded-[28px] flex-shrink-0 relative overflow-hidden shadow-md group transition-transform duration-500"
           >
             <img
               src={card.imageUrl}
@@ -155,7 +157,6 @@ const UICardsImageSlider = () => {
         ))}
       </div>
 
-      {/* Flechas */}
       <div className="flex justify-end px-4 md:absolute md:bottom-3 md:right-6 gap-3 z-2 mt-6 md:mt-0">
         <button
           onClick={() => scroll('left')}
@@ -181,7 +182,6 @@ const UICardsImageSlider = () => {
         </button>
       </div>
 
-      {/* Ocultar scrollbars visualmente */}
       <style>
         {`
           .scrollbar-hide::-webkit-scrollbar {

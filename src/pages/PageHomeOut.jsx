@@ -9,6 +9,7 @@ import UIButtonIcon from "../components/organism/UIButtonIcon";
 import UISliderImage from "../components/organism/UISliderImage";
 import UICardsImageSlider from "../components/organism/UICardsImageSlider";
 import UICardImage from "../components/organism/UICardImage";
+import UIGallery from "../components/organism/UIGallery";
 
 const PageHomeOut = () => {
   return (
@@ -45,6 +46,8 @@ const PageHomeOut = () => {
           
         }
       />
+
+      <UIGallery />
 
       {/* <UICardScroll /> */}
 
