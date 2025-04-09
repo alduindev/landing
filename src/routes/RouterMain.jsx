@@ -22,7 +22,7 @@ export default function RouterMain() {
 
         <Route path="/*" element={<RouterHomeOut />} />
       </Routes>
-      <UIFooter />
+      <UIFooter variante='minimal' />
     </Suspense>
   );
 }
