@@ -10,15 +10,15 @@ import UISliderImage from "../components/organism/UISliderImage";
 import UICardsImageSlider from "../components/organism/UICardsImageSlider";
 import UICardImage from "../components/organism/UICardImage";
 import UIGallery from "../components/organism/UIGallery";
+import UIBarMusic from "../components/organism/UIBarMusic";
 
 const PageHomeOut = () => {
   return (
     <>
-      <UIHeader />
-      {/* <UIBannerPrincipal /> */}
+      <UIBannerPrincipal />
       {/* <UIMediaPlayer /> */}
 
-      <UISliderImage />
+      {/* <UISliderImage /> */}
       <UICardsImageSlider />
 
       <UICardImage
@@ -52,7 +52,8 @@ const PageHomeOut = () => {
       {/* <UICardScroll /> */}
 
       <UIButtonIcon />
-      <UIFooter variante="minimal" />
+
+      <UIBarMusic />
     </>
   );
 };
