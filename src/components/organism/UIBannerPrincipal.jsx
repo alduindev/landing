@@ -145,7 +145,7 @@ export default function UIBannerPrincipal() {
       </div>
 
       {mostrarModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-40 z-50 flex items-center justify-center px-4">
+        <div className="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-md z-50 flex items-center justify-center px-4">
           <div className="bg-[#f0f0f3] rounded-2xl  max-h-[90vh] min-w-[90%] md:min-w-[400px] max-w-md w-full p-6 relative shadow-xl overflow-y-auto">
             <button
               onClick={() => setMostrarModal(false)}

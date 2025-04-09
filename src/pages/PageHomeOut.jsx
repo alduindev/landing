@@ -1,26 +1,15 @@
 import React from "react";
-import UIHeader from "../components/organism/UIHeader";
 import UIBannerPrincipal from "../components/organism/UIBannerPrincipal";
-import UICardScroll from "../components/organism/UICardScroll";
-
-import UIFooter from "../components/organism/UIFooter";
-import UIMediaPlayer from "../components/organism/UIMediaPlayer";
 import UIButtonIcon from "../components/organism/UIButtonIcon";
-import UISliderImage from "../components/organism/UISliderImage";
 import UICardsImageSlider from "../components/organism/UICardsImageSlider";
 import UICardImage from "../components/organism/UICardImage";
 import UIGallery from "../components/organism/UIGallery";
-import UIBarMusic from "../components/organism/UIBarMusic";
 
 const PageHomeOut = () => {
   return (
     <>
       <UIBannerPrincipal />
-      {/* <UIMediaPlayer /> */}
-
-      {/* <UISliderImage /> */}
       <UICardsImageSlider />
-
       <UICardImage
         cards={
           [
@@ -46,14 +35,8 @@ const PageHomeOut = () => {
           
         }
       />
-
       <UIGallery />
-
-      {/* <UICardScroll /> */}
-
       <UIButtonIcon />
-
-      <UIBarMusic />
     </>
   );
 };

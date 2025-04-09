@@ -10,7 +10,7 @@ const UIButtonIcon = () => {
   return (
     <button
       onClick={handleClick}
-      className="fixed bottom-4 right-4 bg-[#25D366] hover:bg-[#1ebe58] text-white p-3 rounded-full shadow-lg transition-all duration-300"
+      className="fixed bottom-4 right-4 bg-[#25D366] hover:bg-[#1ebe58] text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
       aria-label="WhatsApp"
     >
       <svg

@@ -27,6 +27,7 @@ const AuthState = ({ children }) => {
   const { pathname } = useLocation();
 
   const [state, dispatch] = useReducer(AuthReducer, initialState);
+  console.log("globalAutenticado", state.globalAutenticado);
 
   const iniciarSesion = (data) => {
     localStorage.setItem("user", JSON.stringify(data));
@@ -34,6 +35,8 @@ const AuthState = ({ children }) => {
       action: "INICIAR_SESION",
       data,
     });
+
+    navigate("/ecosistema");
   };
 
   const cerrarSesion = () => {
@@ -50,8 +53,12 @@ const AuthState = ({ children }) => {
         action: "INICIAR_SESION",
         data,
       });
+      const rutasIniciales = ["/", "/landing", "/landing/inicia"];
+      if (rutasIniciales.includes(pathname)) {
+        navigate("/ecosistema");
+      }
     }
-  }, []);
+  }, [pathname, navigate]);
 
   return (
     <AuthContext.Provider

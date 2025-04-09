@@ -4,8 +4,6 @@ const UICardImage = ({ cards }) => {
   const count = cards.length;
   const isImpar = count % 2 !== 0;
 
-  console.log(count)
-
   const renderCard = (card, index, extraClasses = '') => (
     <div
       key={index}
